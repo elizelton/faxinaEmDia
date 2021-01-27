@@ -16,12 +16,12 @@ const Routes: React.FC = () => (
       headerTitleStyle: {
         fontWeight: "bold",
       },
+      headerShown: false
     }}
   >
     <Stack.Screen
       name="SingIn"
       component={SingIn}
-      options={{ headerShown: false, headerStyle: { backgroundColor: "#fff" } }}
     />
     <Stack.Screen name="Agendamento" component={Agendamento} />
   </Stack.Navigator>

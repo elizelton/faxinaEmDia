@@ -32,7 +32,7 @@ export const Container = styled.View<ContainerProps>`
   width: 80%;
   height: 50px;
   margin: 3px 10% 10%; 
-  background: #fff;
+  background: #d3e0ea;
   flex-direction: column;
 
   ${(props: any) =>

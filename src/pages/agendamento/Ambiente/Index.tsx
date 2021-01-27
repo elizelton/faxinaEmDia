@@ -2,37 +2,35 @@ import { Form } from "@unform/mobile";
 import React, { useCallback, useState } from "react";
 import { ButtonTT } from "../../../components/form/ButtonTT/Index";
 import Casa from "./Casa/Index";
-import Escritorio from "./Escritorio/Index";
+import { useNavigation } from "@react-navigation/native";
 import { Container, Stack } from "./Styles";
+import { ContainerCentered } from "../../../components/common/style";
+import Button from "../../../components/form/Button/Index";
 
 // import { Container } from './styles';
 
 const Ambiente: React.FC = () => {
-  const [isCasa, setCasa] = useState(true);
+  const navigation = useNavigation();
   const handleSignIn = useCallback(async () => {}, []);
 
   const handleButtonCasa = () => {
-    setCasa(true);
+    navigation.navigate('Casa');
   };
 
   const handleButtonEscritorio = () => {
-    setCasa(false);
+    navigation.navigate('Escritorio');
   };
 
   return (
-    <Container>
+    <ContainerCentered>
       <Form onSubmit={handleSignIn}>
-        <Stack>
-          <ButtonTT children="Minha Casa" onPress={handleButtonCasa}></ButtonTT>
-          <ButtonTT
+          <Button children="Minha Casa" onPress={handleButtonCasa}></Button>
+          <Button
             children="Meu Escritório"
             onPress={handleButtonEscritorio}
-          ></ButtonTT>
-        </Stack>
-        {isCasa && <Casa />}
-        {!isCasa && <Escritorio />}
+          ></Button>
       </Form>
-    </Container>
+    </ContainerCentered>
   );
 };
 

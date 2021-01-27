@@ -9,10 +9,10 @@ export const Container = styled.View`
 `;
 
 export const Titulo = styled.Text`
-  margin-bottom: 5px;
   color: #666360;
-  font-size: 25px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
 `
 
 export const Stack = styled.View`
@@ -20,3 +20,19 @@ export const Stack = styled.View`
   justify-content: space-evenly;
   margin-bottom: 10px
 `;
+
+export const ContainerCentered = styled.View`
+  flex: 1;
+  background: #fff;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 10px 0px 10px;
+  width: 100%;
+`;
+
+export const SubTitulo = styled.Text`
+  color: #666360;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+`
